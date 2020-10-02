@@ -16,7 +16,7 @@ ls /home/$user/.config/rofi 2> /dev/null 1> /dev/null || mkdir /home/$user/.conf
 sudo cp -r $PWD/dotfiles/blocks/* /usr/share/i3blocks
 sudo cp -r $PWD/dotfiles/i3blocks.conf /etc
 cp -r $PWD/dotfiles/config /home/$user/.config/i3
-cp -r $PWD/misc/HK.jpeg /home/$user/.config/i3
+cp -r $PWD/misc/HK.jpg /home/$user/.config/i3
 cp -r $PWD/dotfiles/config.rasi /home/$user/.config/rofi
 
 echo "done, proceeding to delete script and related garbage."
