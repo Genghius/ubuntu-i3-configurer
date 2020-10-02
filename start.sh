@@ -10,13 +10,13 @@ pulseaudio --version 2> /dev/null 1> /dev/null || echo "pulseaudio $yikes" && su
 
 echo "proceeding to create directories, copy and overwrite dotfiles"
 ls /usr/share/i3blocks/ 2> /dev/null 1> /dev/null || sudo mkdir /usr/share/i3blocks
-ls ~/.config/i3 2> /dev/null 1> /dev/null || mkdir ~/.config/i3
-ls ~/.config/rofi 2> /dev/null 1> /dev/null || mkdir ~/.config/rofi
-sudo cp $PWD/dotfiles/blocks/* /usr/share/i3blocks
-sudo cp $PWD/dotfiles/i3blocks.conf
-cp $PWD/dotfiles/config ~/.config/i3
-cp $PWD/misc/HK.jpeg ~/.config/i3
-cp $PWD/dotfiles/config.rasi ~/.config/rofi
+ls /home/*/.config/i3 2> /dev/null 1> /dev/null || mkdir /home/*/.config/i3
+ls /home/*/.config/rofi 2> /dev/null 1> /dev/null || mkdir /home/*/.config/rofi
+sudo cp -r $PWD/dotfiles/blocks/* /usr/share/i3blocks
+sudo cp -r $PWD/dotfiles/i3blocks.conf
+cp -r $PWD/dotfiles/config /home/*/.config/i3
+cp -r $PWD/misc/HK.jpeg /home/*/.config/i3
+cp -r $PWD/dotfiles/config.rasi /home/*/.config/rofi
 
 echo "done, proceeding to delete script and related garbage."
 trap "rm -rf $PWD" EXIT
