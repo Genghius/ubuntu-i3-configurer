@@ -1,3 +1,7 @@
+if [ "$EUID" -ne 0 ]
+  then echo "please run the script as root. with:         sudo bash start.sh"
+  exit
+fi
 yikes="not installed, proceeding to install..."
 echo "Checking that all required packages are installed..."
 rofi -v 2> /dev/null 1> /dev/null || echo "rofi $yikes"&& sudo apt install -y rofi
@@ -25,4 +29,4 @@ cp -r $PWD/misc/HK.jpg /home/$user/.config/i3
 cp -r $PWD/dotfiles/config.rasi /home/$user/.config/rofi
 
 echo "done, proceeding to delete script and related garbage."
-trap "rm -rf $PWD" EXIT
+rm -rf $PWD
