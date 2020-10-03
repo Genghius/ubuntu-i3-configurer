@@ -9,4 +9,4 @@ all keybinding, configuration files and else can be found after instalation in:
 /usr/share/i3blocks
 
 
-### Must be run as root to work
+### Must be run as sudo to work
