@@ -4,6 +4,7 @@ rofi -v 2> /dev/null 1> /dev/null || echo "rofi $yikes"&& sudo apt install -y ro
 awk -V 2> /dev/null 1> /dev/null || echo "awk $yikes" && sudo apt install -y mawk
 feh -v 2> /dev/null 1> /dev/null || echo "feh $yikes" && sudo apt install -y feh
 sensors -v 2> /dev/null 1> /dev/null || echo "sensors $yikes" && sudo apt install -y lm-sensors
+mpstat -V 2> /dev/null 1> /dev/null || echo "mpstat $yikes" && sudo apt install -y sysstat
 scrot -v 2> /dev/null 1> /dev/null || echo "scrot $yikes" && sudo apt install -y scrot
 dmenu -v 2> /dev/null 1> /dev/null || echo "dmenu $yikes" && sudo apt install -y dmenu
 i3blocks -V 2> /dev/null 1> /dev/null || echo "i3blocks $yikes" && sudo apt install -y i3blocks
