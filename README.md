@@ -1,4 +1,4 @@
-# Arch-i3-configurer
+# Ubuntu-i3-configurer
 
 This script will configure an i3 instalation in Ubuntu based distro, like Linux Mint; Dark theme and a basic set of config files included.
 
