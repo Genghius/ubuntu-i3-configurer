@@ -31,10 +31,10 @@ user=$(logname)
 # Copy dotfiles
 # Create directories
 echo "Creating directories to copy and overwrite dotfiles if do not exist"
-ls /home/$user/.config/i3blocks 2> /dev/null 1> /dev/null || mkdir /home/$user/.config/i3blocks
-ls /home/$user/.config/i3 2> /dev/null 1> /dev/null || mkdir /home/$user/.config/i3
-ls /home/$user/.config/rofi 2> /dev/null 1> /dev/null || mkdir /home/$user/.config/rofi
-ls /home/$user/.config/dunst 2> /dev/null 1> /dev/null || mkdir /home/$user/.config/dunst
+ls /home/$user/.config/i3blocks 2> /dev/null 1> /dev/null || mkdir -p /home/$user/.config/i3blocks
+ls /home/$user/.config/i3 2> /dev/null 1> /dev/null || mkdir -p /home/$user/.config/i3
+ls /home/$user/.config/rofi 2> /dev/null 1> /dev/null || mkdir -p /home/$user/.config/rofi
+ls /home/$user/.config/dunst 2> /dev/null 1> /dev/null || mkdir -p /home/$user/.config/dunst
 
 # Really copy dotfiles
 echo "Copying dotfiles to respective locations"
