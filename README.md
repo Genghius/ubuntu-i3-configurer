@@ -20,3 +20,5 @@ All dotfiles now uses ~/ (home) directories only instead of /etc and weird locat
 100% shell language\
 thanks to ronycreator
 
+## The script should leave an i3 configuration looking like this:
+![what the script should generate](https://github.com/Genghius/arch-i3-configurer/blob/master/i3configurerresult.png)
