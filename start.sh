@@ -20,6 +20,9 @@ i3blocks -V 2> /dev/null 1> /dev/null || (echo "i3blocks $yikes" && sudo apt ins
 pulseaudio --version 2> /dev/null 1> /dev/null || (echo "pulseaudio $yikes" && sudo apt install -y pulseaudio 1> /dev/null 2> /dev/null )
 dunst -v 2> /dev/null 1> /dev/null || (echo "dunst $yikes" && sudo apt install -y dunst 1> /dev/null 2> /dev/null )
 
+# At this point why havent i called it debian i3 configurer? lolkek
+ps -e | grep X 2> /dev/null 1> /dev/null || X -v 2> /dev/null 1> /dev/null || (echo "Xorg $yikes" && sudo apt install -y xorg 1> /dev/null 2> /dev/null && echo "exec i3" >> /home/$user/.xinitrc)
+
 # More checking
 echo "checking i3 or i3-gaps is installed..."
 i3 -v 2> /dev/null 1> /dev/null || (echo "i3-gaps $yikes" && sudo apt install -y libxcb1-dev libxcb-keysyms1-dev libpango1.0-dev libxcb-util0-dev libxcb-icccm4-dev libyajl-dev libstartup-notification0-dev libxcb-randr0-dev libev-dev libxcb-cursor-dev libxcb-xinerama0-dev libxcb-xkb-dev libxkbcommon-dev libxkbcommon-x11-dev autoconf xutils-dev libtool automake libxcb-xrm-dev 1> /dev/null && git clone https://www.github.com/Airblader/i3 i3-gaps && cd i3-gaps && git checkout gaps && git pull && autoreconf --force --install && rm -rf build && mkdir build && cd build && ../configure --prefix=/usr --sysconfdir=/etc --disable-sanitizers && make && sudo make install && cd ..)
