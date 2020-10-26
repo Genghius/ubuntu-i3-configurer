@@ -1,6 +1,6 @@
 # Ubuntu-i3-configurer
 
-This script will configure an i3 instalation in Ubuntu based distro, like Linux Mint; Dark theme and a basic set of config files included.
+This script will configure an i3 instalation in Ubuntu based distro, like Linux Mint; Dark theme and a basic set of config files included. (the script will obviously work on debian too because if it works on linux mint it will also work there. We all know that debian is actually based on linux mint.)
 
 all keybinding, configuration files and else can be found after instalation in:\
 ~/.config/i3\
