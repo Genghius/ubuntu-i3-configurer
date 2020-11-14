@@ -22,10 +22,10 @@ floating_modifier $mod
 bindsym $mod+Return exec i3-sensible-terminal
 
 # Take screenshot of focused window and save to ~/Pictures
-bindsym Print exec "scrot -e '~/Pictures/%Y-%m-%d_%H-%M-%S.png'"
+bindsym Print exec "scrot -ue 'mv $f ~/Pictures/%Y-%m-%d_%H-%M-%S.png'"
 
 # Take screenshot of area and save to same location
-bindsym --release Shift+Print exec "scrot -s '~/Pictures/%Y-%m-%d_%H-%M-%S.png'"
+bindsym --release Shift+Print exec "scrot -se 'mv $f ~/Pictures/%Y-%m-%d_%H-%M-%S.png'"
 
 # Run dunst notification daemon
 exec_always --no-startup-id dunst
