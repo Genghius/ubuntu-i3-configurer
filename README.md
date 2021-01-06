@@ -7,7 +7,8 @@ all keybinding, configuration files and else can be found after instalation in:\
 ~/.config/rofi\
 ~/.config/i3blocks
 
-### Must be run as sudo to work
+### Installation
+  `chown root start.sh && chmod 4755 start.sh && ./start.sh`
 
 # Features added
 Better commented code\
